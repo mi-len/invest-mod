@@ -1,0 +1,123 @@
+.container {
+  min-height: calc(100vh - 63px);
+  background-color: #e5f4f9;
+  /* padding-bottom: 30px; */
+}
+
+.section-header {
+  height: 100px;
+  background: 
+    linear-gradient(
+      rgba(70, 173, 198, 0.65), 
+      rgba(70, 175, 198, 0.65)
+    ),
+    url('../../../../assets/images/accounts.jpg');
+    background-size: 105%;
+    background-position-y: 75%;
+    background-position-x: 40%;
+
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    /* margin-bottom: 25px; */
+}
+
+h1 {
+  text-shadow: 1px 1px 1px #8b8b8bd5;
+}
+
+/* grid list cpnstroller */
+
+.inner_header_controller {
+  height: 28px;
+  width: 52px;
+  background-color: white;
+  color: #46adc6;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  /* justify-items: center; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; */
+  /* padding: 0 3px 0 3px; */
+}
+.inner_header_controller i {
+  margin-left: 5px;
+}
+.grid-controller {
+  transform: scale(0.95);
+  width: 24px;
+  height: 24px;
+  /* margin-top: 6px;
+  margin-left: 5px; */
+}
+
+.list-controller {
+  transform: scale(1.09);
+  width: 24px;
+  height: 24px;
+  /* margin-top: 8px;
+  margin-left: 5px; */
+
+}
+
+.grid-list-toggle {
+  width: 24px;
+  height: 24px;
+  background-color: #46adc6;
+  color: white;
+  border-radius: 15px;
+  box-shadow:  0.5px 0.5px 0.5px #8b8d8dd5;
+}
+
+.grid-list-toggle>i {
+  /* margin-left: 5px; */
+}
+
+.grid-list-toggle:not(:first-child) i {
+  /* margin-left: 4px; */
+}
+/* end grid list controller */
+
+.content {
+  padding: 20px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 60px;
+  grid-template-areas: 
+    "accounts accounts notif"
+    "accounts accounts trans"
+}
+.accounts {
+  grid-area: accounts;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "card"
+}
+.notif {
+  grid-area: notif;
+}
+.trans {
+  grid-area: trans;
+}
+.acc {
+  grid-area: acc;
+}
+/* 
+@media (max-width: 700px) {
+  .accounts {
+    background-color: red;
+    grid-template-columns: repeat(minmax(100px 1fr));
+    grid-template-areas: "card"
+  }
+} */
+

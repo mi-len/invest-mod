@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="section-header">
+    <h1>Сметки</h1>
+    <div class="inner_header_controller" (click)='changeGrid($event)'>
+      <div>
+        <i class="zmdi zmdi-apps grid-controller"></i>
+      </div>
+      <div class="grid-list-toggle" >
+        <i class="zmdi zmdi-view-list-alt list-controller"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="content" [style.gridTemplateAreas]="this.grid ? this.gridTemplate : this.listTemplate">
+    <div class="accounts" [ngStyle]='gridAccountsStyles()'>
+          <div *ngFor="let account of accounts">
+            <app-account class="acc" [account]="account" [grid]='grid'></app-account>
+          </div>
+          <app-new-account *ngIf="!grid"></app-new-account>
+    </div>
+    <app-notification class="notif" *ngIf="grid" [grid]='grid'></app-notification>
+    <app-notification class="notif" *ngIf="!grid" [grid]='grid'></app-notification>
+    <app-transactions class="trans" *ngIf="!grid"></app-transactions>
+    <app-transactions class="trans" *ngIf="grid" [grid]='grid'></app-transactions>
+  </div>
+</div>

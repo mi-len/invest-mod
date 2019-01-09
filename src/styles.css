@@ -1,1 +1,124 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: lightgray;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+} 
+
+@font-face {
+  font-family: UniCredit-CY-Regular;
+  src: url(.\assets\fonts\UniCredit-CY-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: UniCredit-CY-Bold;
+  src: url(.\assets\fonts\UniCredit-CY-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: UniCredit-CY-Light;
+  src: url(.\assets\fonts\UniCredit-CY-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: PT-Sans;
+  src: url(.\assets\fonts\PT_Sans-Web-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: PT-Sans-Bold;
+  src: url(.\assets\fonts\PT_Sans-Web-Bold.ttf) format("truetype");
+}
+
+* {
+  font-family: PT-Sans;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 10;
+}
+
+h1 {
+  font-family: UniCredit-CY-Bold;
+  font-size: 44px;
+  line-height: 50px;
+}
+
+h2 {
+  font-family: UniCredit-CY-Light;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h3 {
+  font-family: UniCredit-CY-Regular;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h4 {
+  font-family: UniCredit-CY-Regular;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+h5 {
+  font-family: UniCredit-CY-Regular;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.font-big {
+  font-family: PT-Sans;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 10;
+}
+
+.font-med {
+  font-family: PT-Sans;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 10;
+}
+
+.font-med-bold {
+  font-family: PT-Sans-Bold;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 10;
+}
+
+.font-small {
+  font-family: PT-Sans;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 10;
+}
+
+.font-small-num {
+  font-family: UniCredit-CY-Bold;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 10;
+}
+
+.shadowbox {
+  box-shadow:  1px 1.5px 2px #8b8d8d34;
+}
+
+.na {
+  font-size: 24px;
+  color: grey;
+  margin-top: 50px;
+}

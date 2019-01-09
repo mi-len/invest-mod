@@ -1,0 +1,50 @@
+.notif_container {
+  margin: -50px 0px 0 15px;
+}
+
+.notif_txt {
+  background-color: #00d3b3;
+  color: white;
+  height: 60px;
+  border-radius: 2px;
+  font-family: UniCredit-CY-Light;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 25px;
+}
+
+.close-x {
+  color: lightgray;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  top: 14px;
+  right: -4px;
+}
+
+.close-x>i {
+  background-color: #e5f4f8;
+  border: 1px solid #e5f4f8;
+  border-radius:25px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.basket-i {
+  color: #00d3b3;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  top: 64px;
+  left: -15px;
+}
+
+.basket-i>i {
+  padding-top: 5px;
+  padding-left: 5px;
+}

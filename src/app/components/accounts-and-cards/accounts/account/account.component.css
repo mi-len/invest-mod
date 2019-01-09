@@ -1,0 +1,131 @@
+.container {
+  /* margin: 0px 20px 20px 20px; */
+  background-color: white;
+  border-radius: 3px;
+  /* min-width: 668px; */
+}
+
+.container_grid {
+  /* min-width: 300px; */
+  /* margin-top: 20px; */
+}
+
+.acc_header {
+  text-align: left;
+  height: 50px;
+  padding-left: 20px;
+  color: white;
+  /* background-color: aquamarine; */
+  background: #2ABFDC;
+  background: -moz-linear-gradient(-45deg, #2ABFDC 0%, #2ACCDB 100%);
+  background: -webkit-linear-gradient(-45deg, #2ABFDC 0%, #2ACCDB 100%);
+  background: linear-gradient(135deg, #2ABFDC 0%, #2ACCDB 100%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: UniCredit-CY-Light;
+  font-size: 25px;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+
+.acc_header i {
+ transform: scale(0.8);
+}
+
+.acc_header input {
+  width: 90%;
+  background-color:rgba(0, 0, 0, 0);
+  color:white;
+  border: none;
+  border-bottom: 1px solid white;
+  /* border-radius: 3px; */
+  height: 30px;
+  outline:none;
+  transition:height 1s;
+  -webkit-transition:height 1s;
+}
+
+.acc_header:hover {
+  background: #2ACCDB;
+  background: -moz-linear-gradient(-45deg, #2ACCDB 0%,  #2ABFDC 100%);
+  background: -webkit-linear-gradient(-45deg, #2ACCDB 0%,  #2ABFDC 100%);
+  background: linear-gradient(135deg, #2ACCDB 0%,  #2ABFDC 100%);
+}
+
+.acc_grid_header {
+  font-size: 20px;
+}
+
+.acc_body {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
+}
+
+.acc_body_grid {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 15px 0 15px;
+}
+
+.acc_body_txt {
+  font-size: 16px;
+  color: gray;
+} 
+
+.acc_body_num {
+  font-family: UniCredit-CY-Bold;
+  font-size: 24px;
+  color: rgb(100, 100, 100);
+  margin-left: 5px;
+}
+
+.acc_body_divider {
+  border-bottom: 1 solid gray;
+  /* width: 600px; */
+}
+
+mat-divider {
+  margin: 0 auto;
+  width: 95%;
+  color:  lightgrey;
+}
+
+.acc_body i {
+  margin: 0 10px 0 10px;
+  transform: scale(1.3);
+  color: #46adc6;
+}
+
+.acc_body_cards {
+  color: #46adc6;
+  font-weight: bold;
+}
+
+.card_type {
+  text-align: right;
+  color: #46adc6;
+}
+
+.card_num {
+  color: rgb(175, 175, 175);
+  font-size: 14px;
+}
+
+.sub-sub-menu {
+  background-color: #F3F8FB;
+  color: #46adc6;
+}
+.sub-sub-menu div {
+  font-size: 16px;
+}
+.sub-sub-menu i {
+  margin-right: 10px;
+}

@@ -1,0 +1,54 @@
+
+<section class="container" [class.container-list]='!grid'>
+
+    <!-- <mat-form-field class="child">
+    <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field> -->
+
+    <mat-table [dataSource]='dataSource' matSort >
+
+        <ng-container matColumnDef='Date'>
+            <mat-header-cell *matHeaderCellDef mat-sort-header class="column-s">Дата</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-s" >{{ element.Date }}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef='Hour' >
+            <mat-header-cell *matHeaderCellDef class="column-s">Час</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-s">{{ element.Hour }}</mat-cell>
+        </ng-container>
+     
+        <ng-container matColumnDef='Account'>
+            <mat-header-cell *matHeaderCellDef mat-sort-header class="column-l">Сметка</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-l">{{ element.Account }}</mat-cell>
+        </ng-container>
+        
+        <ng-container matColumnDef='OtherSide'>
+            <mat-header-cell *matHeaderCellDef class="column-m" [class.column_list_l]='!grid'>Получател Наредител</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-m" [class.column_list_l]='!grid'>{{element.OtherSide}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef='Reason'>
+            <mat-header-cell *matHeaderCellDef mat-sort-header class="column-m">Основание</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-m">{{element.Reason}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef='Currency' >
+            <mat-header-cell *matHeaderCellDef class="column-s" [class.column_list_s]='!grid'>Валута</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-s" [class.column_list_s]='!grid'>{{element.Currency}}</mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef='Value'>
+            <mat-header-cell *matHeaderCellDef class="column-s " [class.column_list_s]='!grid' >Сума</mat-header-cell>
+            <mat-cell *matCellDef="let element" class="column-s trans_num" [class.column_list_s]='!grid'>{{element.Value | number | numPipe}}</mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns" [class.hide_headers]='!grid'></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+    </mat-table>
+    <div *ngIf="!grid" class='table_bottom'>ВИЖТЕ ДВИЖЕНИЯ ПО ВСИЧКИ СМЕТКИ</div>
+    <!-- <div *ngIf="!this.womenCount && !this.menCount" class="nobody">Currently 0 clients</div> -->
+
+
+
+</section>

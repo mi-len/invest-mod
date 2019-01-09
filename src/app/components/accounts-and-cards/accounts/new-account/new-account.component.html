@@ -1,0 +1,23 @@
+<div class="container" [class.container_grid]='grid' *ngIf="showGhost">
+
+    <span class="close-x">
+        <i class="zmdi zmdi-close-circle" (click)='closeNotif()'></i>
+    </span>
+
+    <div class="acc_header" [class.acc_grid_header]='!this.grid'>
+      Това може да е новата ви сметка 
+    </div>
+  
+    <div *ngIf="!this.grid" class="acc_body">
+      <div class="acc_body_txt">BG08UNCR0000000000</div>
+      <div><span class="acc_body_txt">BGN</span> <span class="acc_body_num">2 000<span class="font-small-num">,00</span></span></div>
+    </div>
+  
+    <mat-divider></mat-divider>
+  
+    <div class="acc_body">
+      <button mat-button class="btn_details"><span>ДЕТАЙЛИ</span></button>
+      <button mat-button class="btn_request"><span>ЗАЯВИ</span></button>
+    </div>
+  </div>
+  

@@ -1,0 +1,47 @@
+<div class="container shadowbox" [class.container_grid]='grid'>
+  <div class="acc_header" [class.acc_grid_header]='this.grid' *ngIf="!this.canEditHeader">
+    {{account.name}} <i class="zmdi zmdi-edit" (click)="toggleEdit()"></i>
+  </div>
+  <div class="acc_header" [class.acc_grid_header]='this.grid' *ngIf="this.canEditHeader">
+    <input type="text" placeholder="{{account.name}}" autofocus> <i class="zmdi zmdi-stop" (click)="toggleEdit()"></i>
+  </div>
+
+  <div *ngIf="!this.grid" class="acc_body">
+    <div class="acc_body_txt">{{account.BIC}}</div>
+    <div><span class="acc_body_txt">BGN</span> <span class="acc_body_num">{{account.value | number | numPipe}}<span class="font-small-num">,00</span></span></div>
+  </div>
+  <div *ngIf="this.grid" class="acc_body_grid">
+    <div class="acc_body_txt">{{account.BIC}}</div>
+    <div><span class="acc_body_txt">BGN</span> <span class="acc_body_num">{{account.value | number | numPipe}}<span class="font-small-num">,00</span></span></div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="acc_body">
+    <div>
+      <i class="zmdi zmdi-balance-wallet"></i>
+      <!-- <i class="zmdi zmdi-more"></i> -->
+
+      <span>
+        <button mat-button [matMenuTriggerFor]="menu" ><i class="zmdi zmdi-more"></i></button>
+        <mat-menu #menu="matMenu">
+          <div>
+            <button mat-menu-item class="font-small sub-sub-menu"><div><i class="zmdi zmdi-star"></i> Сметка по подразбиране</div></button>
+            <button mat-menu-item class="font-small sub-sub-menu"><div><i class="zmdi zmdi-notifications"></i> Нотификации</div></button>
+            <button mat-menu-item class="font-small sub-sub-menu"><div><i class="zmdi zmdi-accounts-add"></i> Права по сметка</div></button>
+          </div>
+        </mat-menu>
+      </span>
+
+    </div>
+    <div *ngIf="account.cardsCount >= 0">
+      <button mat-button [matMenuTriggerFor]="menu" ><span class="font-med acc_body_cards">{{account.cardsCount}} <i class="zmdi zmdi-card"></i></span>  </button>
+      <mat-menu #menu="matMenu">
+        <div *ngFor="let card of account.cards">
+          <button mat-menu-item class="marg-r font-med"><div class="card_type font-med">{{card.type}}</div> <div class="card_num">{{card.number}}</div></button>
+        </div>
+        
+      </mat-menu>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div id="header">
+  <div class='logo_menu_container'>
+    <div class="burger-menu"><i class="zmdi zmdi-menu"></i></div>
+    <!-- <img src="http://ellefu.eu/ind/assets/images/Logo-flat.svg" alt="logo"> -->
+    <span class="logo" style="color:grey">LOGO</span>
+
+  </div>
+ 
+  <div class="account"> 
+    <div class="profil">
+      <i class="zmdi zmdi-account"></i>
+      <button mat-button [matMenuTriggerFor]="menu" (mouseenter)="openMenu()"><span class="font-med">Иван Иванов</span>  </button>
+      <mat-menu #menu="matMenu" class="users_list">
+        <button mat-menu-item class="marg-r font-med"><i class="zmdi zmdi-account"></i>Иван Иванов</button>
+        <button mat-menu-item class="marg-r font-med"><i class="zmdi zmdi-account"></i>Петър Петров</button>
+      </mat-menu>
+      
+    </div>
+    <span class="v-devider"></span>
+    <div><i class="zmdi zmdi-notifications"></i></div>
+    <div><i class="zmdi zmdi-settings"></i></div>
+    <div><i class="zmdi zmdi-calendar"></i></div>
+    <div><i class="zmdi zmdi-assignment-check"></i></div>
+    <span class="v-devider"></span>
+    <div><i class="zmdi zmdi-open-in-new"></i><span class="marg-r font-med">Изход</span></div>
+  </div>
+</div>
+
+

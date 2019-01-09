@@ -1,0 +1,31 @@
+.container {
+  height: calc(100vh - 63px);
+  background-color: #e5f4f9;
+
+}
+
+.section-header {
+  height: 100px;
+  background-color: lightblue;
+}
+
+.section-header {
+  background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(70, 173, 198, 0.65), 
+      rgba(70, 175, 198, 0.65)
+    ),
+    /* bottom, image */
+    url('../../../../assets/images/cards.jpg');
+    background-size: 100%;
+    background-position-y: 60%;
+    background-position-x: 0px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    text-shadow: 1px 1px 1px #868686;
+
+}

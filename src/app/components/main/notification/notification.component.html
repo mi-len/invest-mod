@@ -1,0 +1,14 @@
+<div class="notif_container" *ngIf="notification">
+  <div class="basket-i">
+    <i class="zmdi zmdi-shopping-basket"></i>
+  </div>
+
+  <span class="close-x">
+    <i class="zmdi zmdi-close-circle" (click)='closeNotif()'></i>
+  </span>
+
+  <div class="notif_txt shadowbox" [class.notif_txt-list]='!grid'>
+    Заявете одобрен Овърдрафт за 2 000 BGN за Разплащателна сметка 1
+  </div>
+
+</div>
